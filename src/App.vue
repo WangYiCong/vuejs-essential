@@ -1,32 +1,35 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <HelloWorld/>
-    <yicong/>
+  <div id="page">
+    <TheHeader/>
+    <TheFooter/>
   </div>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
-import yicong from './components/yicong'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld,
-    yicong
+import TheHeader from '@/components/layouts/TheHeader'
+import TheFooter from '@/components/layouts/TheFooter'
+  export default {
+    name: 'App',
+    components: {
+      TheHeader,
+      TheFooter
+    }
   }
-}
 </script>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang='scss'>
+  $backgroundColor: #cccccc;
+  $itembackground: blue;
+  body{
+    background: $backgroundColor;
+  }
 
+
+// 下面这里主要是引入外面的sass、字体文件、bootstrap框架等
+
+// @import "~bootstrap-sass/assets/stylesheets/_bootstrap";
+// @import "~font-awesome/scss/font-awesome";
+// @import "./styles/main";
+// @import "./styles/extra";
 </style>
